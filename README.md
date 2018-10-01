@@ -1,7 +1,7 @@
 # Schlupys-World
 RPG PRoject
 
-Download it here - domica.xyz/SchlupyRPG
+Download it here - http://domica.xyz/SchlupyRPG
 
 ALPHA v0.131
 - Added LivingEntity.cs // Contains values for 'living' entities (gold, hp, inventory)
