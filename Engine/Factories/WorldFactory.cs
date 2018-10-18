@@ -13,15 +13,15 @@ namespace Engine.Factories
         {
             World newWorld = new World();
 
-            newWorld.AddLocation(-2, -1, "Farmer's Field", 
-                "Ovdje ima sjebanih stvari pajdo, pazi se stakora", 
+            newWorld.AddLocation(-2, -1, "Farmer's Field",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mauris.", 
                 "farmfield.jpg",
                 "Map-2-1.png");
 
             newWorld.LocationAt(-2, -1).AddMonster(2, 100);
 
             newWorld.AddLocation(-1, -1, "Farmer's House",
-                 "Ovo ti je kuca od susjeda, farmer Pajdo",
+                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mauris.",
                  "farmhouse.jpg", 
                  "Map-1-1.png");
 
@@ -32,11 +32,11 @@ namespace Engine.Factories
                 "house.jpg", "Map0-1.png");
 
             newWorld.AddLocation(0, 0, "Town Square",
-                "Vidi fontana wauwwwww",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mauris.",
                 "fountain.jpg", "Map00.png");
 
             newWorld.AddLocation(0, 1, "Herbalist hut",
-                 "how ya doin' mon?",
+                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mauris.",
                   "herbalisthut.jpg", "Map01.png");
 
             newWorld.LocationAt(0, 1).TraderHere = TraderFactory.GetTraderById(3); // Pete the ganja man Trader
@@ -44,7 +44,7 @@ namespace Engine.Factories
             newWorld.LocationAt(0, 1).QuestsAvailableHere.Add(QuestFactory.GetQuestById(1));
 
             newWorld.AddLocation(0, 2, "Herb Garden",
-                 "smoke herbs erryday",
+                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mauris.",
                   "herbgarden.jpg", "Map02.png");
 
             newWorld.LocationAt(0, 2).AddMonster(1, 100);
@@ -59,7 +59,7 @@ namespace Engine.Factories
                   "towngate.jpg", "Map10.png");
 
             newWorld.AddLocation(2, 0, "Spider forest",
-                 "Oh no you got lost idiot",
+                 "Oh no you got lost",
                   "spiderforest.png", "Map20.png");
 
             newWorld.LocationAt(2, 0).AddMonster(3, 100);

@@ -21,6 +21,7 @@ namespace Engine.ViewModels
         private Trader _currentTrader;
         private Player _currentPlayer;
         private Potion _currentPotion;
+        public string Name { get; set; }
 
         public World CurrentWorld { get; set; }
         public Player CurrentPlayer
@@ -129,13 +130,9 @@ namespace Engine.ViewModels
 
         public bool HasPotion => CurrentPotion != null;
 
+
         #endregion
 
-
-        public void ChracterCreation(string name)
-        {
-
-        }
 
         public async void CoolDown()
         {
@@ -144,14 +141,20 @@ namespace Engine.ViewModels
             await Task.Delay(500);
             RaiseMessage(".");
         }
-        public GameSession()
+
+        public void CreateChar(string name)
         {
 
-            CurrentPlayer = new Player("Hardcoded", "Hardcoded", 0, 10, 10, 1000000);
-               if (!CurrentPlayer.Weapons.Any())
-                 {
-                  CurrentPlayer.AddItemToInventory(ItemFactory.CreateGameItem(1001));
-                 }
+        }
+
+        public GameSession(string characterName)
+        {
+            CurrentPlayer = new Player(characterName, "Hardcoded", 0, 10, 10, 1000000);
+
+            if (!CurrentPlayer.Weapons.Any())
+            {
+                CurrentPlayer.AddItemToInventory(ItemFactory.CreateGameItem(1001));
+            }
 
             CurrentWorld = WorldFactory.CreateWorld(); // Stvori world
             CurrentLocation = CurrentWorld.LocationAt(0, 0); // Trenutna lokacija

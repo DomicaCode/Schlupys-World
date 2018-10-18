@@ -23,15 +23,17 @@ namespace WPFUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly GameSession _gameSession = new GameSession();
+        private static string CharacterName;
+        private GameSession _gameSession = new GameSession(CharacterName);
 
         public string readTxtBox;
 
-        public MainWindow()
+        public MainWindow(string characterName)
         { 
             InitializeComponent();
 
-            _gameSession = new GameSession();
+            CharacterName = characterName;
+            _gameSession = new GameSession(CharacterName);
 
             _gameSession.OnMessageRaised += OnGameMessageRaised;
 

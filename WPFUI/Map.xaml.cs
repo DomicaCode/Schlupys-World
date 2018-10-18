@@ -22,7 +22,6 @@ namespace WPFUI
     /// 
     public partial class Map : Window
     {
-        private readonly GameSession _gameSession = new GameSession();
 
         public Map()
         {

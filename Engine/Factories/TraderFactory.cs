@@ -18,12 +18,15 @@ namespace Engine.Factories
             susan.AddItemToInventory(ItemFactory.CreateGameItem(1001));
             susan.AddItemToInventory(ItemFactory.CreateGameItem(123));
             susan.AddItemToInventory(ItemFactory.CreateGameItem(69));
+            susan.AddItemToInventory(ItemFactory.CreateGameItem(9001));
 
             Trader farmerTed = new Trader(2, "Farmer Ted");
             farmerTed.AddItemToInventory(ItemFactory.CreateGameItem(666));
+            farmerTed.AddItemToInventory(ItemFactory.CreateGameItem(9001));
 
             Trader peteTheHerbalist = new Trader(3, "Pete the ganja man");
             peteTheHerbalist.AddItemToInventory(ItemFactory.CreateGameItem(1001));
+            peteTheHerbalist.AddItemToInventory(ItemFactory.CreateGameItem(9001));
 
             AddTraderToList(susan);
             AddTraderToList(farmerTed);
